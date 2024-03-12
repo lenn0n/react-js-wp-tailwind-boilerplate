@@ -20,11 +20,12 @@ const router = createBrowserRouter(
 
       <Route element={<PublicRoute />}>
         {/* <Route path="/login" element={<Login />} /> */}
+        <Route path="*" element={<NoMatch />} />
       </Route>
 
       {/* <Route path="/" element={<Landing />} /> */}
    
-      <Route path="*" element={<NoMatch />} />
+    
     </>
   )
 );

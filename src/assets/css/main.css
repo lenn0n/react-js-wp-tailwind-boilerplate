@@ -544,3 +544,106 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.tw-mx-10 {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
+.tw-mt-\[-100px\] {
+  margin-top: -100px;
+}
+
+.tw-mt-\[-50px\] {
+  margin-top: -50px;
+}
+
+.tw-mt-\[-20px\] {
+  margin-top: -20px;
+}
+
+.tw-mt-\[-30px\] {
+  margin-top: -30px;
+}
+
+.tw-mt-\[-60px\] {
+  margin-top: -60px;
+}
+
+.tw-flex {
+  display: flex;
+}
+
+.tw-h-\[100vh\] {
+  height: 100vh;
+}
+
+.tw-flex-col {
+  flex-direction: column;
+}
+
+.tw-flex-wrap {
+  flex-wrap: wrap;
+}
+
+.tw-flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.tw-items-center {
+  align-items: center;
+}
+
+.tw-justify-center {
+  justify-content: center;
+}
+
+.tw-text-center {
+  text-align: center;
+}
+
+.tw-text-\[200px\] {
+  font-size: 200px;
+}
+
+.tw-text-\[30px\] {
+  font-size: 30px;
+}
+
+.tw-text-\[20px\] {
+  font-size: 20px;
+}
+
+.tw-text-\[25px\] {
+  font-size: 25px;
+}
+
+.tw-font-\[900\] {
+  font-weight: 900;
+}
+
+.tw-text-lime-600 {
+  --tw-text-opacity: 1;
+  color: rgb(101 163 13 / var(--tw-text-opacity));
+}
+
+.tw-text-rose-600 {
+  --tw-text-opacity: 1;
+  color: rgb(225 29 72 / var(--tw-text-opacity));
+}
+
+.tw-text-\[\#ccc\] {
+  --tw-text-opacity: 1;
+  color: rgb(204 204 204 / var(--tw-text-opacity));
+}
+
+@font-face {
+  font-family: "Poppins";
+
+  /*Can be any text*/
+
+  src: url("../../assets/fonts/Poppins-ExtraBold.ttf");
+}
+
+body{
+  font-family: "Poppins";
+}

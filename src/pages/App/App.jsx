@@ -1,7 +1,8 @@
 import React, { Suspense } from 'react';
 import { Route, createBrowserRouter, RouterProvider, createRoutesFromElements } from 'react-router-dom';
 import {
-  NoMatch
+  NoMatch,
+  Login
 } from '@pages';
 
 import { PublicRoute, ProtectedRoute } from '@components';
@@ -19,7 +20,7 @@ const router = createBrowserRouter(
       </Route>
 
       <Route element={<PublicRoute />}>
-        {/* <Route path="/login" element={<Login />} /> */}
+        <Route path="/login" element={<Login />} />
         <Route path="*" element={<NoMatch />} />
       </Route>
 

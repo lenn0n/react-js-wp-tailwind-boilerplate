@@ -9,7 +9,7 @@ const useEncryption = () => {
   
       return CryptoJS.AES.encrypt(text, String(process.env.SECRET_KEY)).toString();
     } catch (error) {
-      console.log('UNABLE_TO_ENCODE_TWARNING: ' + error);
+      console.log('UNABLE_TO_ENCODE_STRING: ' + error);
       return '';
     }
   }

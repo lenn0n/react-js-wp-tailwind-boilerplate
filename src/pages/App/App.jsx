@@ -21,6 +21,7 @@ const router = createBrowserRouter(
 
       <Route element={<PublicRoute />}>
         <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
         <Route path="*" element={<NoMatch />} />
       </Route>
 

@@ -6,7 +6,40 @@
 
 @font-face {
   font-family: "Poppins";   /*Can be any text*/
+  src: url("../../assets/fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "PoppinsBold";   /*Can be any text*/
   src: url("../../assets/fonts/Poppins-ExtraBold.ttf");
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+  
+}
+@keyframes fadeOutAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+  
+}
+body, div {
+  animation: fadeInAnimation ease-in-out 0.5s;
+  animation-iteration-count: 1;
+}
+
+.modal-overlay {
+  animation: fadeOutAnimation ease-in-out 0.5s;
+  animation-iteration-count: 1;
 }
 
 body{

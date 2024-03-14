@@ -1,8 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
-  prefix: "tw-",
-  content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/*.html"],
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}", 
+    "./public/*.html",
+    'node_modules/flowbite-react/lib/esm/**/*.js',],
   theme: {
     screens: {
       "mobile-s": "320px",
@@ -25,12 +27,12 @@ module.exports = {
         wiggle: 'wiggle 2s ease-in-out infinite',
       },
       colors: {
-        "custom-primary": "#2970db",
-        "vb-primary": "#007E7E",
-        "vb-admin": "#2970db",
-        "vb-secondary": "#182667",
-        "vb-footer": "#0e5454",
-        textColor: "#1e213d",
+        primary: "#E5142A",
+        secondary: "#707070",
+        black: "#292929",
+        body: "#FBFBFB",
+        white: "#FFF",
+        "sub-primary": "#EB6448"
       },
       boxShadow: {
         "shadow-lg": "0px 0px 40px 15px rgba(0, 0, 0, 0.3)",
@@ -39,7 +41,8 @@ module.exports = {
         // "blur-blue": "url('../../landing/images/background/blur-radial.svg')",
       },
       fontFamily: {
-        town: ["Town"],
+        poppins: ["Poppins"],
+        "poppins-bold": ["PoppinsBold"],
       },
     },
     fontWeight: {
@@ -58,6 +61,7 @@ module.exports = {
   },
   plugins: [
 		require("tailwindcss"), 
+    require('flowbite/plugin'),
 		// require("autoprefixer")
 	],
 };

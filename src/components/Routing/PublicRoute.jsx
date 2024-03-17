@@ -25,7 +25,7 @@ function PublicRoute() {
       {isValidating ?
         <FullLoading loadingText='C H E C K I N G' />
         :
-        <div className='fadeIn'>
+        <div className='fadeIn dark:bg-black'>
           <Outlet />
         </div>
 

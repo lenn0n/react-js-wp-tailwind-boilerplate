@@ -5,13 +5,13 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Poppins";   /*Can be any text*/
-  src: url("../../assets/fonts/Poppins-Regular.ttf");
+  font-family: 'Poppins'; /*Can be any text*/
+  src: url('../../assets/fonts/Poppins-Regular.ttf');
 }
 
 @font-face {
-  font-family: "PoppinsBold";   /*Can be any text*/
-  src: url("../../assets/fonts/Poppins-ExtraBold.ttf");
+  font-family: 'PoppinsBold'; /*Can be any text*/
+  src: url('../../assets/fonts/Poppins-ExtraBold.ttf');
 }
 
 @keyframes fadeInAnimation {
@@ -21,7 +21,6 @@
   100% {
     opacity: 1;
   }
-  
 }
 @keyframes fadeOutAnimation {
   0% {
@@ -30,11 +29,12 @@
   100% {
     opacity: 0;
   }
-  
 }
-body, div {
+body,
+div {
   animation: fadeInAnimation ease-in-out 0.5s;
   animation-iteration-count: 1;
+  font-family: 'Poppins';
 }
 
 .modal-overlay {
@@ -42,6 +42,32 @@ body, div {
   animation-iteration-count: 1;
 }
 
-body{
-  font-family: "Poppins";
+.flex input:focus,
+.flex button:focus, .custom-input-wrapper:focus-within {
+  box-shadow: 0 0 2px #ccc;
+  @apply border-black border-[2px];
+}
+
+.custom-input input {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.custom-input input:focus {
+  box-shadow: 0 0 0px #eb6448;
+  @apply border-[0px];
+}
+
+.custom-dropdown {
+  background-position: right 0.75rem center;
+  background-repeat: no-repeat;
+  background-size: 0.75em 0.75em;
+  padding-right: 2.5rem;
+  -webkit-print-color-adjust: exact;
+  /* width: 100px; */
+  @apply bg-dropdown inline-flex bg-gray-200 rounded-s-lg px-2 items-center text-[15px] text-gray-500 border-[1px] border-gray-300 border-e-0
+}
+
+ul>li>button:focus, .custom-input-wrapper:focus-within{
+  @apply rounded-lg
 }

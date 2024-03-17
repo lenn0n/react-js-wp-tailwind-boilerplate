@@ -39,6 +39,7 @@ module.exports = {
       },
       backgroundImage: {
         // "blur-blue": "url('../../landing/images/background/blur-radial.svg')",
+        dropdown: 'url("data:image/svg+xml,%3csvg aria-hidden=%27true%27 xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 10 6%27%3e %3cpath stroke=%27%236B7280%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%272%27 d=%27m1 1 4 4 4-4%27/%3e %3c/svg%3e")'
       },
       fontFamily: {
         poppins: ["Poppins"],

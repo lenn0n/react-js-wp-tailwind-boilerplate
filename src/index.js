@@ -6,6 +6,7 @@ import store from '@store';
 import App from '@pages/App/App';
 
 import "@assets/css/main.css";
+import "@assets/css/flags.css";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

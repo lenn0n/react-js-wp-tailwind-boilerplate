@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31">
+  <g id="clock-circle" transform="translate(-1304 -485)">
+    <rect id="Rectangle_907" data-name="Rectangle 907" width="31" height="31" transform="translate(1304 485)" fill="#e5142a" opacity="0"/>
+    <g id="clock-circle-svgrepo-com" transform="translate(1305 486)">
+      <path id="Path_621" data-name="Path 621" d="M27.8,14.9A12.9,12.9,0,1,1,14.9,2,12.9,12.9,0,0,1,27.8,14.9Z" transform="translate(0 0)" fill-rule="evenodd"/>
+      <path id="Path_622" data-name="Path 622" d="M12.218,7.25a.968.968,0,0,1,.968.968v4.76l2.942,2.942a.968.968,0,0,1-1.368,1.368l-3.225-3.225a.967.967,0,0,1-.283-.684V8.218A.968.968,0,0,1,12.218,7.25Z" transform="translate(2.684 1.523)" fill="#fff" />
+    </g>
+  </g>
+</svg>

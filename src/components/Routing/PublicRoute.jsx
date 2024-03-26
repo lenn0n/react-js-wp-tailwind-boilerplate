@@ -10,15 +10,15 @@ function PublicRoute() {
   const [isValidating, setIsValidating] = useState(false)
 
   const getAccessToken = () => {
-    return getCookie('user_token')
+    return getCookie('admin_token')
   }
 
-  const getAuthToken = () => {
-    return getAccessToken()
-  }
-  const hasUserToken = () => {
-    return getAuthToken() !== ''
-  }
+  useEffect(() => {
+    if (getAccessToken()) {
+      navigate("/dashboard")
+    }
+  }, [])
+
 
   return (
     <>

@@ -58,7 +58,7 @@ module.exports = {
     port: 3000,
     proxy: {
       '/api/admin': {
-        target: `http://127.0.0.1:35219/api`,
+        target: `http://192.168.1.127:40500/api/checkout/admin`,
         pathRewrite: { '^/api/admin': '' },
       },
       '/api/wsNotification': {

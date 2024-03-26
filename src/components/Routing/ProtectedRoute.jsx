@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
+
 import {
   useCookie,
   useEncryption,
@@ -8,39 +9,33 @@ import {
 import {
   updateUserLoggedIn,
 } from "@store/features/authentication/authenticationSlice";
+
 import FullLoading from "@components/FullBackground/FullLoading";
+import MainLayout from '@components/Layout/MainLayout';
 
 function ProtectedRoute() {
-  const navigate = useNavigate();
+  const navigate = useNavigate(); 
   const dispatch = useDispatch();
   const { decode } = useEncryption();
   const { getCookie } = useCookie();
   const [isValidating, setIsValidating] = useState(true);
-    useSubscriptionExpiration();
 
   const getAccessToken = () => {
-    return decode(getCookie("user_token"));
-  };
-
-  const getAuthToken = () => {
-    return getAccessToken();
-  };
-
-  const hasUserToken = () => {
-    return getAuthToken() !== "";
+    console.log(decode(getCookie("admin_token")))
+    return decode(getCookie("admin_token"));
   };
 
   useEffect(() => {
-    if (!hasUserToken()) {
+    if (getAccessToken() == '') { 
       navigate("/login");
     }
     setIsValidating(false);
 
-    if (getCookie("user_profile")) {
+    if (getCookie("admin_profile")) {
       let profile = {}
 
       try {
-        profile = JSON.parse(decode(getCookie("user_profile")));
+        profile = JSON.parse(decode(getCookie("admin_profile")));
       } catch (error) { }
 
       dispatch(updateUserLoggedIn(profile));
@@ -51,10 +46,10 @@ function ProtectedRoute() {
   return (
     <>
       {isValidating ? (
-        <FullLoading />
+        <FullLoading  loadingText='C H E C K I N G' />
       ) : (
-        <div className="">
-          <Outlet />
+        <div>
+          <MainLayout />
         </div>
       )}
     </>

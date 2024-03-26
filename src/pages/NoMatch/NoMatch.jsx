@@ -7,7 +7,7 @@ function NoMatch() {
 
   return (
     <>
-      <div className='font-poppins-bold flex flex-col justify-center
+      <div className='font-poppins flex flex-col justify-center
     items-center h-[100vh] text-center'>
         <div className='font-[900] text-[200px]'>
           PAGE

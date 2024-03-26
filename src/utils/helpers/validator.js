@@ -7,7 +7,7 @@ import _ from 'lodash';
  * @return {boolean} Returns true if not empty
  * @typescript by lennon
  */
-export const isEmpty = (data: {} | Array<any>): boolean => {
+export const isEmpty = (data) => {
   return _.isEmpty(data);
 };
 
@@ -19,7 +19,7 @@ export const isEmpty = (data: {} | Array<any>): boolean => {
  * @return {boolean}    - Returns true if a valid function
  * @typescript by lennon
  */
-export const isCallbackValid = (callback: any): boolean => {
+export const isCallbackValid = (callback) => {
   if (callback != undefined && callback != null && callback != '' && typeof callback === 'function') {
     return true;
   }
@@ -39,9 +39,9 @@ export const isCallbackValid = (callback: any): boolean => {
  * @typescript by lennon
  */
 export const createCustomValidationRule = (
-  ruleName: string,
-  errorMessage: string,
-  validateFunction: (inputValue: any, formObj: any) => any) => {
+  ruleName,
+  errorMessage,
+  validateFunction) => {
   return {
     name: ruleName,
     message: errorMessage,
@@ -49,7 +49,7 @@ export const createCustomValidationRule = (
   }
 };
 
-export const requiredRule = (inputName: string, errorMessage: string) => {
+export const requiredRule = (inputName, errorMessage) => {
   return createCustomValidationRule(
     'required',
     (errorMessage ? errorMessage : `${inputName} required.`),
@@ -63,7 +63,7 @@ export const requiredRule = (inputName: string, errorMessage: string) => {
   );
 }
 
-export const mustTrue = (inputName: string, errorMessage: string) => {
+export const mustTrue = (inputName, errorMessage) => {
   return createCustomValidationRule(
     'mustTrue',
     (errorMessage ? errorMessage : `${inputName} required.`),
@@ -73,7 +73,7 @@ export const mustTrue = (inputName: string, errorMessage: string) => {
   );
 }
 
-export const amountRule = (inputName: string, errorMessage: string) => {
+export const amountRule = (inputName, errorMessage) => {
   return createCustomValidationRule(
     'amount',
     (errorMessage ? errorMessage : `${inputName} should be number format.`),
@@ -88,7 +88,7 @@ export const amountRule = (inputName: string, errorMessage: string) => {
   );
 }
 
-export const integerRule = (inputName: string, errorMessage: string) => {
+export const integerRule = (inputName, errorMessage) => {
   return createCustomValidationRule(
     'integer',
     (errorMessage ? errorMessage : `${inputName} should be whole numbers only.`),
@@ -103,7 +103,7 @@ export const integerRule = (inputName: string, errorMessage: string) => {
   );
 }
 
-export const isAmountSufficient = (errorMessage: string) => {
+export const isAmountSufficient = (errorMessage) => {
   return createCustomValidationRule(
     'isAmountSufficient',
     (errorMessage ? errorMessage : `Insufficient balance.`),
@@ -123,8 +123,8 @@ export const isAmountSufficient = (errorMessage: string) => {
 
 
 export const checkLength = (
-  inputName: string, 
-  { errorMessage, min = 0, max = 0 } : { errorMessage: string, min: number, max: number}) => {
+  inputName,
+  { errorMessage, min = 0, max = 0 }) => {
   return createCustomValidationRule(
     'length',
     (errorMessage ? errorMessage : `${inputName} should be ${min}-${max} characters.`),
@@ -140,7 +140,7 @@ export const checkLength = (
   );
 }
 
-export const checkUpperCase = (inputName: string, errorMessage: string) => {
+export const checkUpperCase = (inputName, errorMessage) => {
   return createCustomValidationRule(
     'uppercase',
     (errorMessage ? errorMessage : `${inputName} should have atleast 1 uppercase character.`),
@@ -150,7 +150,7 @@ export const checkUpperCase = (inputName: string, errorMessage: string) => {
   );
 }
 
-export const checkLowerCase = (inputName: string, errorMessage: string) => {
+export const checkLowerCase = (inputName, errorMessage) => {
   return createCustomValidationRule(
     'uppercase',
     (errorMessage ? errorMessage : `${inputName} should have atleast 1 lowercase character.`),
@@ -160,7 +160,7 @@ export const checkLowerCase = (inputName: string, errorMessage: string) => {
   );
 }
 
-export const hasNumber = (inputName: string, errorMessage: string) => {
+export const hasNumber = (inputName, errorMessage) => {
   return createCustomValidationRule(
     'uppercase',
     (errorMessage ? errorMessage : `${inputName} should have atleast 1 number.`),
@@ -175,7 +175,7 @@ export const hasNumber = (inputName: string, errorMessage: string) => {
   );
 }
 
-export const hasSpecialCharacter = (inputName: string, errorMessage: string) => {
+export const hasSpecialCharacter = (inputName, errorMessage) => {
   return createCustomValidationRule(
     'uppercase',
     (errorMessage ? errorMessage : `${inputName} should have atleast 1 special character.`),
@@ -190,7 +190,7 @@ export const hasSpecialCharacter = (inputName: string, errorMessage: string) => 
   );
 }
 
-export const noSpace = (inputName: string, errorMessage: string) => {
+export const noSpace = (inputName, errorMessage) => {
   return createCustomValidationRule(
     'uppercase',
     (errorMessage ? errorMessage : `${inputName} cannot have space.`),
@@ -206,8 +206,8 @@ export const noSpace = (inputName: string, errorMessage: string) => {
 }
 
 export const stringEqualToFormDataValue = (
-  errorMessage: string, 
-  { fieldName = '' }: { fieldName: string }) => {
+  errorMessage,
+  { fieldName = '' }) => {
   return createCustomValidationRule(
     'uppercase',
     (errorMessage ? errorMessage : `Strings do not match.`),

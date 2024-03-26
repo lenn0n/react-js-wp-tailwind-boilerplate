@@ -1,10 +1,8 @@
-type stringNumberType = number | string[]
-
 export const formatNumber = (
-  number: stringNumberType, 
-  decimal: number = 0, 
-  leadingUnit: string = '', 
-  trailingUnit: string = ''
+  number, 
+  decimal, 
+  leadingUnit, 
+  trailingUnit
   )  => {
   let formatted;
   let num = number;
@@ -61,13 +59,13 @@ export const formatNumber = (
   }
 }
 
-export const strReplace = (string = '', replace: any) => {
+export const strReplace = (string = '', replace) => {
   let str = string;
   if (replace == undefined || replace == null || replace == '' || typeof replace !== 'object') {
     return '';
   }
 
-  Object.entries(replace).forEach(([key, value]: [key: any, value: any]) => {
+  Object.entries(replace).forEach(([key, value]) => {
     str = str.replace(key, value);
   });
 

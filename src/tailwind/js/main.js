@@ -4,7 +4,9 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}", 
     "./public/*.html",
-    'node_modules/flowbite-react/lib/esm/**/*.js',],
+    'node_modules/flowbite-react/lib/esm/**/*.js',
+    "./node_modules/react-tailwindcss-datepicker/dist/index.esm.js",
+  ],
   theme: {
     screens: {
       "mobile-s": "320px",
@@ -32,7 +34,8 @@ module.exports = {
         black: "#292929",
         body: "#FBFBFB",
         white: "#FFF",
-        "sub-primary": "#EB6448"
+        "sub-primary": "#EB6448",
+        "sub-secondary": "#545454"
       },
       boxShadow: {
         "shadow-lg": "0px 0px 40px 15px rgba(0, 0, 0, 0.3)",
@@ -43,7 +46,10 @@ module.exports = {
       },
       fontFamily: {
         poppins: ["Poppins"],
+        "poppins-medium": ["PoppinsMedium"],
         "poppins-bold": ["PoppinsBold"],
+        NotoSans: ["NotoSans"],
+        "NotoSansBold": ["NotoSansBold"],
       },
     },
     fontWeight: {

@@ -3,9 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
   show: false,
   modalId: '',
-  hidden: false,
-  shown: false,
-  componentProps: {}
+  componentProps: {}, 
 };
 
 const modalSlice = createSlice({
@@ -21,14 +19,6 @@ const modalSlice = createSlice({
       state.show = false;
       state.componentProps = {};
     },
-    modalShown(state) {
-      state.shown = true;
-      state.hidden = false;
-    },
-    modalHidden(state) {
-      state.shown = false;
-      state.hidden = true;
-    }
   }
 });
 

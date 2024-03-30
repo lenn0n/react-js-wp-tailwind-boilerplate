@@ -3,7 +3,6 @@ import NoMatch from "@pages/NoMatch/NoMatch"
 import Login from "@pages/Login/Login"
 import Components from "@pages/Components/Components"
 import Dashboard from "./Dashboard/Dashboard"
-import Component from "./Component/Component"
 
 import List from "./User/List/List"
 import Role from "./User/Role/Role"
@@ -19,7 +18,6 @@ export {
   Login,
   Components,
   Dashboard,
-  Component,
 
   List,
   Role,

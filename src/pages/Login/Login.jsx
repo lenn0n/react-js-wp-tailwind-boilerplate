@@ -105,7 +105,7 @@ const Login = () => {
                 <div className="me-3">
                   <img src={Logo} alt="" height={50} width={50} />
                 </div>
-                <div className="font-poppins-bold text-[25px] lg:text-[39px] dark:text-white">OP Software Dev</div>
+                <div className="font-poppins-bold text-[25px] lg:text-[39px] dark:text-white">WEBSITE TITLE</div>
               </div>
 
               <div className="login-content pb-5">
@@ -121,7 +121,7 @@ const Login = () => {
                     label="Email Address"
                     name="email"
                     type="email"
-                    placeholder="admin@opsoftware.dev"
+                    placeholder="admin@email.com"
                     // color="warning"
                     required
                   // helperText={<>This is not a valid email address.</>}
@@ -152,12 +152,10 @@ const Login = () => {
                   >Submit</Button>
                 </form>
 
-                <div className="text-center mt-10">
-                  <div className='text-base text-sub-secondary' role="button" onClick={() => alert("??")}>Resend Verification Code</div>
-                </div>
+           
               </div>
               <div className="login-footer mb-10 text-center dark:text-white">
-                © OP Software Dev {getDateYear()}. All rights reserved.
+                © WEBSITE TITLE {getDateYear()}. All rights reserved.
               </div>
             </div>
           </div>
